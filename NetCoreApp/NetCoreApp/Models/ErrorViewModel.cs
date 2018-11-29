@@ -1,6 +1,6 @@
 using System;
 
-namespace NetCoreApp.Models
+namespace CoreApp.Models
 {
     public class ErrorViewModel
     {

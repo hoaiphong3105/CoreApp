@@ -9,8 +9,9 @@ namespace CoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<BlogTag> entity)
         {
-            entity.Property(c => c.TagId).HasMaxLength(255).IsRequired()
-            .HasColumnType("varchar(255)");
+            entity.Property(c => c.TagId).IsRequired()
+                .IsUnicode(false).HasMaxLength(50);
+            //.HasColumnType("varchar(255)");
             // etc.
         }
     }

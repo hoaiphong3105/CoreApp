@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreApp.Models;
+using CoreApp.Models;
 
-namespace NetCoreApp.Controllers
+namespace CoreApp.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,7 +17,7 @@ namespace NetCoreApp.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Test2.";
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
@@ -29,12 +29,6 @@ namespace NetCoreApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
